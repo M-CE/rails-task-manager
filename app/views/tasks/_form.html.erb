@@ -1,0 +1,13 @@
+<form action="/tasks" method="POST">
+<!-- 	<input type="hidden" name="token" value="...">
+	<input type="text" name="restaurant[name]" placeholder="Enter a name">
+	<input type="text" name="restaurant[address]" placeholder="Enter an address">
+	<input type="number" name="restaurant[rating]" placeholder="0..5">
+	<input type="submit"> -->
+</form>
+
+<%= form_for(@task) do |f| %>
+	<%= f.text_field :name, placeholder: "Enter a name" %>
+	<%= f.text_field :description, placeholder: "Enter a description" %>
+	<%= f.submit %>
+<% end %>

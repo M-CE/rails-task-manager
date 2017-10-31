@@ -1,0 +1,9 @@
+<p><%= @task.name%></p>
+<% if @task.description %>
+<p><%= @task.description%></p>
+<% else %>
+<button><%= link_to "Add a description to this task", edit_task_path %></button>
+<% end %>
+<button><%= link_to "All tasks", tasks_path %></button>
+<button><%= link_to "Edit task", edit_task_path %></button>
+<button><%= link_to "Delete task", task_path(@task), method: :delete %></button>
